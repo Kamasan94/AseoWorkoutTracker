@@ -4,6 +4,7 @@ import {
   UserGroupIcon,
   HomeIcon,
   DocumentDuplicateIcon,
+  CalendarIcon
 } from '@heroicons/react/24/outline';
 
 import Link from 'next/link';
@@ -17,6 +18,11 @@ const links = [
     name: 'Home', 
     href: '/dashboard', 
     icon: HomeIcon 
+  },
+  {
+    name: 'Calendar',
+    href: '/dashboard/calendar',
+    icon: CalendarIcon,
   },
   {
     name: 'Invoices',

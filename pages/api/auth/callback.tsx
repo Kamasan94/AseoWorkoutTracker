@@ -1,5 +1,4 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { Redirect } from 'next';
 import { redirect } from 'next/navigation';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -36,9 +35,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     if (response.ok) {
       // Reindirizza l'utente o gestisci il token come desideri
-      redirect('/dasboard');
+      res.redirect('/dashboard');
       //return res.status(200).json({ message: 'Autenticazione riuscita', data });
-      
     } else {
       return res.status(400).json({ error: 'Autenticazione fallita', data });
     }
